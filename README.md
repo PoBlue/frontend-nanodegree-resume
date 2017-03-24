@@ -2,7 +2,7 @@
 
 ## 项目介绍
 
-Udacity 第 4 个项目：[在线简历](https://github.com/udacity/frontend-nanodegree-resume).因为不可抗元素，Google 地图 API 不能用。于是就改成用高德地图的 API 了。
+Udacity 第 4 个项目：[在线简历](https://github.com/udacity/frontend-nanodegree-resume)因为不可抗元素，Google 地图 API 不能用。于是就改成用高德地图的 API 了。
 
 ## 如何运行
 
