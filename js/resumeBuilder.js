@@ -1,6 +1,6 @@
 /*
-This is empty on purpose! Your code to build the resume will go here.
- */
+建立简历的代码将会在这个文件里写出
+*/
 
-//添加高德地图到 mapDiv 上
-$("#mapDiv").append(gaodeMap);
+//解除下面代码的注释, 添加高德地图到 mapDiv 上，使得简历拥有地图
+//$("#mapDiv").append(gaodeMap);
