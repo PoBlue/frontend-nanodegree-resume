@@ -6,8 +6,6 @@ Don't worry, you'll learn what's going on in this file throughout the course. Yo
 
 Cameron Pittman
 */
-
-
 /*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
@@ -65,7 +63,7 @@ The Internationalize Names challenge found in the lesson Flow Control from JavaS
 $(document).ready(function() {
   $('button').click(function() {
     var $name = $('#name');
-    var iName = inName($name.text()) || function(){};
+    var iName = inName($name.text()) || function() {};
     $name.html(iName);
   });
 });
@@ -75,13 +73,11 @@ The next few lines about clicks are for the Collecting Click Locations quiz in t
 */
 var clickLocations = [];
 
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
+function logClicks(x, y) {
+  clickLocations.push({
+    x: x,
+    y: y
+  });
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
@@ -96,7 +92,7 @@ This is the fun part. Here's where we generate the custom Google Map for the web
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
-var map;    // declares a global map variable
+var map; // declares a global map variable
 
 /*
 Start here! initializeMap() is called when page is loaded.
@@ -136,7 +132,7 @@ function locationFinder() {
     locations.push(school.location);
   });
 
-  
+
   // 迭代 work 的 jobs 数据里的地址，并将地址添加到 locations 数组里
   work.jobs.forEach(function(job) {
     locations.push(job.location);
@@ -163,8 +159,8 @@ function searchLocation(name) {
       //使用 result 在地图上创建标记
       var position = extraPositionFromJson(result);
       placeMarker(position.lng, position.lat, map);
-    }); 
-  })
+    });
+  });
 }
 
 //解析 JSON 并返回地图的坐标
@@ -193,5 +189,4 @@ Uncomment the code below when you're ready to implement a Google Map!
 window.addEventListener('load', initializeMap);
 window.addEventListener('resize', function(e) {
   map.setFitView();
-})
-
+});
