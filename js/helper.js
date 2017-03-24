@@ -1,14 +1,15 @@
 /*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
+此文件包含所有能使得 resumeBuilder.js 能够运行的代码。 我们称之为帮助函数，因为它们支持您在本课程中的代码。
 
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+不要担心，您将在整个课程中了解此文件中发生的情况。
 
 Cameron Pittman
 */
+
 /*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
+这些是 HTML 字符串。 作为课程的一部分，
+您将使用JavaScript函数替换您在其中看到的 ％data％ 占位符文本。
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
@@ -88,14 +89,14 @@ $(document).click(function(loc) {
 
 
 /*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
+这是有趣的部分。 这里是我们为网站生成自定义高德地图的地方。
+有关详细信息，请参阅以下文档。
+http://lbs.amap.com/
 */
-var map; // declares a global map variable
+var map; // 声明一个全局变量，存储地图对象
 
 /*
-Start here! initializeMap() is called when page is loaded.
+从这里开始！ 在加载页面时会调用initializeMap（）
 */
 function initializeMap() {
   // 创建地图对象
@@ -118,6 +119,7 @@ function initializeMap() {
   map.setFitView();
 }
 
+//这个函数会读取，你在 resumeBuilder.js 所写下的全部有关地址的数据
 function locationFinder() {
 
   // 初始化一个空的数组，用来存储地点
@@ -142,6 +144,7 @@ function locationFinder() {
 }
 
 
+//根据地址的名字，将标记添加上地图上
 function searchLocation(name) {
   AMap.service('AMap.PlaceSearch', function() { //回调函数
     //实例化PlaceSearch
@@ -181,12 +184,10 @@ function placeMarker(lng, lat, map) {
   });
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
-// Calls the initializeMap() function when the page loads
+// 在加载页面时调用 initializeMap（）函数
 window.addEventListener('load', initializeMap);
+
+// 当页面的大小改变时，调整地图的缩放
 window.addEventListener('resize', function(e) {
   map.setFitView();
 });
