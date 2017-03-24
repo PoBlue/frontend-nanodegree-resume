@@ -207,6 +207,10 @@ span {
   margin: 0 5%;
 }
 
+#map img {
+  padding: 0;
+}
+
 #mapDiv {
   height: 400px;
   width: 100%;
